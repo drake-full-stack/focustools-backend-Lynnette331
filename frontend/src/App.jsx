@@ -12,6 +12,8 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
   // Load tasks from database on mount
   useEffect(() => {
     loadTasks();
